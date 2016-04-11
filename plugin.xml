@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="fr.faylixe.jammy.addons">
+      <fr.faylixe.jammy.addons.manager
+            language="Python"
+            projectConfigurator="fr.faylixe.jammy.addons.python.PythonProjectConfigurator"
+            runnerFactory="fr.faylixe.jammy.addons.python.PythonSolverRunnerFactory"
+            solverExtension=".py"
+            solverPath="src"
+            templateFactory="fr.faylixe.jammy.addons.python.PythonSolverTemplateFactory">
+      </fr.faylixe.jammy.addons.manager>
+   </extension>
+
+</plugin>
