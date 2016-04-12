@@ -2,13 +2,17 @@
 
 Jammy addons provides additional language support.
 
-
-Various scripting language are handled through DLTK stack.
+## Already supported language :
 
 * Python
-* Ruby
-* Javascript
-* Perl
-* PHP
-* Lua
+
+## Language integration schedule :
+
+* Ruby : Unknown
+* C / C++ : Unknown
+* Perl : Unknown
+* Javascript : Unknown
+* PHP : Unknown
+* Lua : Unknown
+
 
