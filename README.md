@@ -1,2 +1,12 @@
-# jammy-python
-Jammy plugin that adds Python language support.
+# Jammy addons
+
+Jammy addons provides additional language support.
+
+Various scripting language are handled through DLTK stack.
+
+* Python
+* Ruby
+* Javascript
+* Perl
+* PHP
+* Lua
