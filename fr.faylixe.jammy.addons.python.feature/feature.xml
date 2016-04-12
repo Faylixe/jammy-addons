@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.faylixe.jammy.addons.python.feature"
+      label="Feature"
+      version="1.0.0.qualifier"
+      provider-name="faylixe.fr"
+      plugin="fr.faylixe.jammy.addons.python"
+      license-feature="fr.faylixe.jammy"
+      license-feature-version="1.1.0.201604081340">
+
+   <description url="http://faylixe.fr/jammy/">
+      Python language support for Jammy
+   </description>
+
+   <license url="http://www.apache.org/licenses/">
+      [Enter License Description here.]
+   </license>
+
+   <url>
+      <update label="Jammy update site" url="http://faylixe.fr/jammy/update"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources" version="3.9.1" match="greaterOrEqual"/>
+      <import plugin="fr.faylixe.jammy.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.dltk.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.dltk.python.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.dltk.python.launching" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.dltk.launching" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.core" version="3.9.1" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="fr.faylixe.jammy.addons.python"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
