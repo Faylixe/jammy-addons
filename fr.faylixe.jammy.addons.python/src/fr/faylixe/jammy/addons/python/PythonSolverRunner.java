@@ -41,7 +41,7 @@ public final class PythonSolverRunner extends AbstractLaunchSolverRunner {
 	protected Map<String, String> createAttributesMap(final String arguments, final String output) {
 		final Map<String, String> attributes = createBaseMap(output);
 		final ProblemSolver solver = getSolver();
-		attributes.put(ScriptLaunchConfigurationConstants.ATTR_MAIN_SCRIPT_NAME, solver.getFile().getName());
+		attributes.put(ScriptLaunchConfigurationConstants.ATTR_MAIN_SCRIPT_NAME, "src/" + solver.getFile().getName());
 		attributes.put(ScriptLaunchConfigurationConstants.ATTR_SCRIPT_NATURE, PythonNature.NATURE_ID);
 		attributes.put(ScriptLaunchConfigurationConstants.ATTR_PROJECT_NAME, solver.getProject().getName());
 		attributes.put(ScriptLaunchConfigurationConstants.ATTR_SCRIPT_ARGUMENTS, arguments);

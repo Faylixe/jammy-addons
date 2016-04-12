@@ -28,13 +28,6 @@ public final class PythonProjectConfigurator implements IProjectConfigurator {
 
 	/** {@inheritDoc} **/
 	@Override
-	public boolean shouldCreate() {
-		// TODO : Check if any interpreter is available.
-		return false;
-	}
-
-	/** {@inheritDoc} **/
-	@Override
 	public void configure(final IProject project, final IProgressMonitor monitor) throws CoreException {
 		final IProjectDescription description = project.getDescription();
 		description.setNatureIds(new String[] { PythonNature.NATURE_ID });
