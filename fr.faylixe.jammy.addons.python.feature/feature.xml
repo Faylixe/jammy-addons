@@ -20,6 +20,10 @@
       <update label="Jammy update site" url="http://faylixe.fr/jammy/update"/>
    </url>
 
+   <includes
+         id="org.python.pydev.feature"
+         version="0.0.0"/>
+
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>

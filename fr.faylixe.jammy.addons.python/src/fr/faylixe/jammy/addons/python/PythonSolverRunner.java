@@ -3,11 +3,7 @@ package fr.faylixe.jammy.addons.python;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.debug.core.DebugPlugin;
-import org.eclipse.dltk.launching.ScriptLaunchConfigurationConstants;
-import org.eclipse.dltk.launching.process.ScriptRuntimeProcessFactory;
-import org.eclipse.dltk.python.core.PythonNature;
-import org.eclipse.dltk.python.launching.PythonLaunchConfigurationConstants;
+import org.python.pydev.debug.core.Constants;
 
 import fr.faylixe.jammy.core.ProblemSolver;
 import fr.faylixe.jammy.core.addons.AbstractLaunchSolverRunner;
@@ -33,7 +29,7 @@ public final class PythonSolverRunner extends AbstractLaunchSolverRunner {
 	/** {@inheritDoc} **/
 	@Override
 	protected String getLaunchConfigurationType() {
-		return PythonLaunchConfigurationConstants.ID_PYTHON_SCRIPT;
+		return Constants.ID_PYTHON_REGULAR_LAUNCH_CONFIGURATION_TYPE;
 	}
 
 	/** {@inheritDoc} **/
@@ -41,13 +37,9 @@ public final class PythonSolverRunner extends AbstractLaunchSolverRunner {
 	protected Map<String, String> createAttributesMap(final String arguments, final String output) {
 		final Map<String, String> attributes = createBaseMap(output);
 		final ProblemSolver solver = getSolver();
-		attributes.put(ScriptLaunchConfigurationConstants.ATTR_MAIN_SCRIPT_NAME, "src/" + solver.getFile().getName());
-		attributes.put(ScriptLaunchConfigurationConstants.ATTR_SCRIPT_NATURE, PythonNature.NATURE_ID);
-		attributes.put(ScriptLaunchConfigurationConstants.ATTR_PROJECT_NAME, solver.getProject().getName());
-		attributes.put(ScriptLaunchConfigurationConstants.ATTR_SCRIPT_ARGUMENTS, arguments);
-		attributes.put(DebugPlugin.ATTR_PROCESS_FACTORY_ID, ScriptRuntimeProcessFactory.PROCESS_FACTORY_ID);
-//		attributes.put("org.eclipse.debug.core.MAPPED_RESOURCE_PATHS", "[/test_project/A.py]");
-//		attributes.put("org.eclipse.debug.core.MAPPED_RESOURCE_TYPES", "[1]");
+		attributes.put(Constants.ATTR_PROGRAM_ARGUMENTS, arguments);
+		attributes.put(Constants.ATTR_PROJECT, solver.getProject().getName());
+		attributes.put(Constants.ATTR_LOCATION, solver.getFile().getRawLocation().toOSString());
 		return attributes;
 	}
 
