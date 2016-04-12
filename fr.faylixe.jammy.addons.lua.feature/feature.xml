@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.faylixe.jammy.addons.lua.feature"
+      label="Lua addon"
+      version="1.0.0.qualifier"
+      provider-name="faylixe.fr"
+      plugin="fr.faylixe.jammy.addons.lua">
+
+   <description url="http://faylixe.fr/jammy">
+      Lua language support for Jammy
+   </description>
+
+   <license url="http://www.apache.org/licenses/">
+      APACHE LICENCE
+   </license>
+
+   <url>
+      <update label="Jammy update site" url="http://faylixe.fr/jammy"/>
+   </url>
+
+   <includes
+         id="org.eclipse.koneki.ldt"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources" version="3.9.1" match="greaterOrEqual"/>
+      <import plugin="fr.faylixe.jammy.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.koneki.ldt" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.koneki.ldt.debug.core" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.core"/>
+   </requires>
+
+   <plugin
+         id="fr.faylixe.jammy.addons.lua"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
