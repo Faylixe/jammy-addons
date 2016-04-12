@@ -8,7 +8,7 @@ end
 
 local file = io.open(arg[1], "r");
 local T = file:read("*number");
-for i = 0, T do
+for i = 0, T - 1 do
   local result = solve(file)
-  print("Case #" .. i .. ": " .. result)
+  print("Case #" .. i + 1 .. ": " .. result)
 end
