@@ -5,6 +5,7 @@ Jammy addons provides additional language support.
 ## Already supported language :
 
 * Python
+* Lua
 
 ## Language integration schedule :
 
@@ -13,6 +14,5 @@ Jammy addons provides additional language support.
 * Perl : Unknown
 * Javascript : Unknown
 * PHP : Unknown
-* Lua : Unknown
 
 
